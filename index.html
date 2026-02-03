@@ -16,7 +16,7 @@ body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     color: var(--text);
-    background-image: url('IMG-20251229-WA0028.jpg'); 
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -25,7 +25,7 @@ body {
 }
 
 .overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -275,14 +275,8 @@ function setupConvertGrid(data, containerId) {
                     return;
                 }
                 let res = data[key](num).toFixed(2);
-                
-                // Show on display first
                 display.value = res;
-                
-                // Switch to home
                 showPage('calc-page', document.querySelector('.nav-item:first-child'));
-                
-                // Log to history
                 saveToHistory(`${val} (${key}) = ${res}`);
             }
         };
